@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <Vheader></Vheader>
+    <header-top></header-top>
+    <v-header></v-header>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Vheader from './components/Vheader.vue'
+import HeaderTop from './components/HeaderTop.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Vheader
+    'v-header' : Vheader,
+    'header-top' : HeaderTop
   }
 }
 </script>
