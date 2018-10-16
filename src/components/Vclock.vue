@@ -7,10 +7,10 @@
 let initCanvas = () => {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
-    ctx.strokeStyle = '#00ffff';
+    ctx.strokeStyle = 'rgba(183, 0, 255, 0.4)';
     ctx.lineWidth = 6;
     ctx.shadowBlur= 2;
-    ctx.shadowColor = '#00ffff';
+    ctx.shadowColor = 'rgba(183, 0, 255, 0.4)';
     function degToRad(degree){
     	var factor = Math.PI/180;
     	return degree*factor;
@@ -47,11 +47,11 @@ let initCanvas = () => {
     	ctx.stroke();
     	//Date
     	ctx.font = "12px Helvetica";
-    	ctx.fillStyle = 'rgba(00, 255, 255, 1)';
+    	ctx.fillStyle = 'rgba(183, 0, 255, )';
     	ctx.fillText(today, 55, 90);
     	//Time
     	ctx.font = "12px Helvetica Bold";
-    	ctx.fillStyle = 'rgba(00, 255, 255, 1)';
+    	ctx.fillStyle = 'rgba(183, 0, 255, 1)';
     	ctx.fillText(time, 65, 120);
     }
     setInterval(renderTime, 40);
