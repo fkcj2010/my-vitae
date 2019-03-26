@@ -8,12 +8,13 @@
   },
   "dependencies": {
     "element-ui": "^2.4.8",
-    "vue": "^2.5.17"
+    "vue": "^2.6.8",
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.6.8"
   },
   "postcss": {
     "plugins": {

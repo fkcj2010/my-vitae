@@ -1,21 +1,18 @@
 <template>
   <div id="app">
-    <header-top></header-top>
-    <v-header></v-header>
+    <main-ui>
+      <p>body here</p>
+    </main-ui>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Vheader from './components/Vheader.vue'
-import HeaderTop from './components/HeaderTop.vue'
+import MainUi from "./layouts/Main.vue";
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-    'v-header' : Vheader,
-    'header-top' : HeaderTop
+    MainUi
   }
 }
 </script>
@@ -23,13 +20,7 @@ export default {
 <style>
 body{
   margin: 0px;
+  width: 100%;
+  min-width: 1050px;
 }
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
 </style>

@@ -1,32 +1,18 @@
 <template>
   <div class="header">
-    <el-menu
-  :default-active="activeIndex2"
+  <el-menu
+  :default-active="this.$route.path"
   class="el-menu-demo"
   mode="horizontal"
+  :router="true"
   @select="handleSelect"
   background-color="#545c64"
   text-color="#fff"
   active-text-color="#ffd04b"
-  center=true
   >
-  <el-menu-item index="1">首页</el-menu-item>
-  <el-menu-item index="2">学无止境</el-menu-item>
-  <!-- <el-submenu index="2">
-    <template slot="title">我的工作台</template>
-    <el-menu-item index="2-1">选项1</el-menu-item>
-    <el-menu-item index="2-2">选项2</el-menu-item>
-    <el-menu-item index="2-3">选项3</el-menu-item>
-    <el-submenu index="2-4">
-      <template slot="title">选项4</template>
-      <el-menu-item index="2-4-1">选项1</el-menu-item>
-      <el-menu-item index="2-4-2">选项2</el-menu-item>
-      <el-menu-item index="2-4-3">选项3</el-menu-item>
-    </el-submenu>
-  </el-submenu> -->
-  <el-menu-item index="3">生活乐闻</el-menu-item>
-  <el-menu-item index="4">电影天地</el-menu-item>
-  <el-menu-item index="5"><a href="https://www.baidu.com" target="_blank">关于我</a></el-menu-item>
+    <el-menu-item v-for="(item,i) in navList" :key="i" :index="item.name">
+        {{ item.navItem }}
+    </el-menu-item>
 </el-menu>
 
   </div>
@@ -40,8 +26,14 @@ export default {
   },
   data() {
     return {
-      activeIndex: '1',
-      activeIndex2: '1'
+      activeIndex: '/life',
+      navList:[
+          {name:'/',navItem:'首页'},
+          {name:'/study',navItem:'学无止境'},
+          {name:'/life',navItem:'生活乐闻'},
+          {name:'/movie',navItem:'电影天地'},
+          {name:'/food',navItem:'美食天下'}
+      ]
     };
   },
   methods: {
@@ -52,9 +44,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .el-menu-demo{
-  padding-left: 50px;
+  padding-left: 100px;
 }
 </style>
