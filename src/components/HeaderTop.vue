@@ -8,7 +8,7 @@
             <!-- <p></p> -->
             <p>~ 日生居士</p>
         </div>
-        <v-spider class="spider"></v-spider>
+        <!-- <v-spider class="spider"></v-spider> -->
     </div>
 </template>
 <script>
@@ -20,6 +20,15 @@ export default {
     components: {
         'v-clock' : Vclock,
         'v-spider' : SpiderSilk
+    },
+    computed: {
+        m() {
+          return 'm';
+        }
+    },
+    methods: {
+        outerNumChange() {
+        }
     }
 }
 </script>
